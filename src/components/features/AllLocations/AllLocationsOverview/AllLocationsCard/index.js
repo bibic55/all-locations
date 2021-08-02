@@ -5,7 +5,7 @@ import Card from '../../../../shared/Card';
 import './index.scss';
 
 const AllLocationsCard = ({ location: { name, userCount, createdAt } }) => (
-  <Card className="allLocationsCard">
+  <Card className="allLocationsCard" onClick={() => {}}>
     <div>{name}</div>
     <div>{userCount}</div>
     <div>{createdAt}</div>

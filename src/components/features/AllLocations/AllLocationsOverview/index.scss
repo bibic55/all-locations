@@ -7,6 +7,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 12.5px 47.5px;
+
+  // Its my guess it should work with center since from design I cant know where the white space should be in cases when there is room for lets say 2.5 cards in one row
+  justify-content: center;
 }
