@@ -4,13 +4,14 @@ import classNames from 'classnames';
 
 import './index.scss';
 
-const Card = ({ children, className, onClick }) => (
+const Card = ({ children, className, onClick, ...props }) => (
   <div
     role="button"
     tabIndex={0}
     className={classNames('card', className)}
     onClick={onClick}
     onKeyPress={onClick}
+    {...props}
   >
     {children}
   </div>

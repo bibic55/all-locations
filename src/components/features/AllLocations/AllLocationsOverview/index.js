@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AllLocationsHeader from './AllLocationsHeader';
+import LocationCard from './LocationCard';
 
 import './index.scss';
-import AllLocationsCard from './AllLocationsCard';
 
 const AllLocationsOverview = ({ locations = [] }) => (
   <div className="allLocations">
@@ -11,7 +11,7 @@ const AllLocationsOverview = ({ locations = [] }) => (
 
     <div className="allLocations__cards">
       {locations.map((location) => (
-        <AllLocationsCard key={location.id} location={location} />
+        <LocationCard key={location.id} location={location} />
       ))}
     </div>
   </div>

@@ -1,0 +1,17 @@
+.iconLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.iconLabel__icon {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.iconLabel__text--ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

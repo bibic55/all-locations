@@ -1,13 +1,19 @@
 @import '../../../styles/_variables.scss';
 
+$cardBorderColor: rgba(0, 17, 34, 0.1);
+$cardBackgroundColor: rgba(246, 246, 246, 0.2);
+$cardHoverBackgroundColor: rgb(246, 246, 246);
+
 .card {
   padding: 15px 25px;
-  border: 1px solid $color__gray;
+  border: 1px solid $cardBorderColor;
   cursor: pointer;
+  border-radius: 2px;
+  background-color: $cardBackgroundColor;
 
   &:hover,
   &:focus,
   &:active {
-    background-color: $color__gray;
+    background-color: $cardHoverBackgroundColor;
   }
 }

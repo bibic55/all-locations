@@ -1,0 +1,36 @@
+@import '../../../../../styles/variables';
+
+.locationCard {
+  margin: 12.5px;
+  width: 340px;
+  position: relative;
+}
+
+.locationCard__name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.778;
+  color: $color__black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.locationCard__content {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.714;
+  color: $color__black;
+}
+
+.locationCard__hoverIcon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: $color__white;
+  padding: 6px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
