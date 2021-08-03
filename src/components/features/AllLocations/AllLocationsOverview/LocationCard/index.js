@@ -14,11 +14,16 @@ import './index.scss';
 
 const LocationCard = ({ location: { name, userCount, createdAt } }) => {
   const [isEditIconShown, setIsEditIconShown] = useState(false);
+  const [numberOfViews, setNumberOfViews] = useState(0);
+
+  const handleClick = () => {
+    setNumberOfViews(numberOfViews + 1);
+  };
 
   return (
     <Card
       className="locationCard"
-      onClick={() => {}}
+      onClick={handleClick}
       onMouseEnter={() => setIsEditIconShown(true)}
       onFocus={() => setIsEditIconShown(true)}
       onMouseLeave={() => setIsEditIconShown(false)}
@@ -38,12 +43,11 @@ const LocationCard = ({ location: { name, userCount, createdAt } }) => {
         label={format(new Date(createdAt), 'K:mm aaa (zzzz)')}
       />
 
-      {/* TODO implement views logic */}
       <IconLabel
         className="locationCard__content"
         isEllipsis
         icon={<Views />}
-        label={Math.floor(Math.random() * 10)}
+        label={numberOfViews}
       />
 
       {isEditIconShown && (
