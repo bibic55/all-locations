@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import AllLocation from '../AllLocations';
-import NotFound from '../../components/shared/NotFound';
+import NotFoundPage from '../../components/shared/NotFoundPage';
 
 import './index.scss';
 
@@ -28,7 +28,7 @@ const App = () => {
             </Route>
 
             <Route>
-              <NotFound />
+              <NotFoundPage />
             </Route>
           </Switch>
         </Router>

@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import './index.scss';
 
-const NotFound = () => {
+const NotFoundPage = () => {
   const history = useHistory();
 
   const handleBackClick = () => {
@@ -20,4 +20,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;
