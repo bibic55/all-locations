@@ -3,8 +3,8 @@ import { useQuery } from 'react-query';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import { fetchAllLocations } from '../../api';
 import AllLocationsOverview from '../../components/features/AllLocations/AllLocationsOverview';
-import ErrorPage from '../../components/shared/ErrorPage';
-import LoadingPage from '../../components/shared/LoadingPage';
+import ErrorPage from '../../components/pages/ErrorPage';
+import LoadingPage from '../../components/pages/LoadingPage';
 import ViewsProvider from '../../contextProviders/ViewsProvider';
 import LocationModal from './LocationModal';
 
