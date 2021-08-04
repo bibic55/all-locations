@@ -1,0 +1,23 @@
+@import '../../../styles/_variables';
+$buttonHoverBackgroundColor: rgba(55, 178, 77, 0.6);
+
+.button {
+  background-color: $color__green;
+  color: $color__white;
+  font-weight: 600;
+  line-height: 1.714;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 15px;
+  font-size: 14px;
+  border-radius: 16px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $buttonHoverBackgroundColor;
+  }
+}

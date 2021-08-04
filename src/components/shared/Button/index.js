@@ -4,22 +4,22 @@ import classNames from 'classnames';
 
 import './index.scss';
 
-const IconButton = ({ icon, onClick, className }) => (
+const Button = ({ onClick, className, label }) => (
   <button
-    className={classNames('iconButton', className)}
+    className={classNames('button', className)}
     type="button"
     onClick={onClick}
     onKeyPress={onClick}
     tabIndex={0}
   >
-    {icon}
+    {label}
   </button>
 );
 
-IconButton.propTypes = {
-  icon: PropTypes.node,
+Button.propTypes = {
+  label: PropTypes.string,
   onClick: PropTypes.func,
   className: PropTypes.func,
 };
 
-export default IconButton;
+export default Button;

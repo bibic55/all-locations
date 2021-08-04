@@ -1,6 +1,6 @@
-$buttonHoverBackgroundColor: rgb(246, 246, 246);
+$iconButtonHoverBackgroundColor: rgb(246, 246, 246);
 
-.button {
+.iconButton {
   background-color: unset;
   border: none;
   display: flex;
@@ -12,6 +12,6 @@ $buttonHoverBackgroundColor: rgb(246, 246, 246);
   &:hover,
   &:focus,
   &:active {
-    background-color: $buttonHoverBackgroundColor;
+    background-color: $iconButtonHoverBackgroundColor;
   }
 }

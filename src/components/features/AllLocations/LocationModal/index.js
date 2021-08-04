@@ -7,7 +7,7 @@ import LocationModalContent from './LocationModalContent';
 const LocationModal = ({ location, handleCloseClick }) => (
   <Modal isOpen onRequestClose={handleCloseClick}>
     <LocationModalHeader name={location.name} handleCloseClick={handleCloseClick} />
-    <LocationModalContent location={location} />
+    <LocationModalContent location={location} handleCloseClick={handleCloseClick} />
   </Modal>
 );
 

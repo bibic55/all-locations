@@ -28,3 +28,10 @@
   color: $color__black;
   opacity: 0.8;
 }
+
+.locationModalContent__submit {
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

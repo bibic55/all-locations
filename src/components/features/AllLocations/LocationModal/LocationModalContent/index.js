@@ -7,8 +7,12 @@ import Views from '../../../../icons/Views';
 import IconLabel from '../../../../shared/IconLabel';
 
 import './index.scss';
+import Button from '../../../../shared/Button';
 
-const LocationModalContent = ({ location: { userCount, numberOfViews, description } }) => (
+const LocationModalContent = ({
+  location: { userCount, numberOfViews, description },
+  handleCloseClick,
+}) => (
   <div className="locationModalContent">
     <IconLabel
       className="locationModalContent__text"
@@ -32,6 +36,10 @@ const LocationModalContent = ({ location: { userCount, numberOfViews, descriptio
 
     <div className="locationModalContent__descriptionLabel">Description</div>
     <div className="locationModalContent__description">{description}</div>
+
+    <div className="locationModalContent__submit">
+      <Button onClick={handleCloseClick} label="Done" />
+    </div>
   </div>
 );
 
@@ -43,6 +51,7 @@ LocationModalContent.propTypes = {
     numberOfViews: PropTypes.number,
     name: PropTypes.string,
   }),
+  handleCloseClick: PropTypes.func,
 };
 
 export default LocationModalContent;
