@@ -1,0 +1,19 @@
+@import '../../../../../styles/_variables';
+
+.locationModalHeader {
+  padding: 16px 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.locationModalHeader__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.778;
+  color: $color__black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.8;
+}

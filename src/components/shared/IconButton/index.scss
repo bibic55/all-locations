@@ -1,0 +1,17 @@
+$buttonHoverBackgroundColor: rgb(246, 246, 246);
+
+.button {
+  background-color: unset;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $buttonHoverBackgroundColor;
+  }
+}

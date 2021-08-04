@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import format from 'date-fns/format';
 
+import { useHistory } from 'react-router-dom';
 import Card from '../../../../shared/Card';
 import IconLabel from '../../../../shared/IconLabel';
 
@@ -12,12 +13,17 @@ import Edit from '../../../../icons/Edit';
 
 import './index.scss';
 
-const LocationCard = ({ location: { name, userCount, createdAt } }) => {
+const LocationCard = ({ location: { name, userCount, createdAt, id } }) => {
+  // It would be better to solve showing of the icon with css and very easy with display:none,
+  // however I had big issues with icons because exports are really bad, they have same id's all over the place and I spent a lot of time just showing them and hover state was easier to do with state
   const [isEditIconShown, setIsEditIconShown] = useState(false);
   const [numberOfViews, setNumberOfViews] = useState(0);
 
+  const history = useHistory();
+
   const handleClick = () => {
     setNumberOfViews(numberOfViews + 1);
+    history.push(`/locations/${id}`);
   };
 
   return (

@@ -1,0 +1,30 @@
+@import '../../../../../styles/_variables';
+
+.locationModalContent {
+  padding: 15px 25px;
+}
+
+.locationModalContent__text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.714;
+  color: $color__black;
+  opacity: 0.8;
+}
+
+.locationModalContent__descriptionLabel {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.714;
+  color: $color__black;
+  opacity: 0.8;
+}
+
+.locationModalContent__description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.714;
+  color: $color__black;
+  opacity: 0.8;
+}
