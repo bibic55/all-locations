@@ -5,6 +5,7 @@ import { fetchAllLocations } from '../../api';
 import AllLocationsOverview from '../../components/features/AllLocations/AllLocationsOverview';
 import ErrorPage from '../../components/shared/ErrorPage';
 import LoadingPage from '../../components/shared/LoadingPage';
+import ViewsProvider from '../../contextProviders/ViewsProvider';
 import LocationModal from './LocationModal';
 
 const AllLocation = () => {
@@ -20,14 +21,14 @@ const AllLocation = () => {
   }
 
   return (
-    <>
+    <ViewsProvider>
       <Switch>
         <Route path={`${path}/:locationId`}>
           <LocationModal locations={data} />
         </Route>
       </Switch>
       <AllLocationsOverview locations={data} />
-    </>
+    </ViewsProvider>
   );
 };
 
