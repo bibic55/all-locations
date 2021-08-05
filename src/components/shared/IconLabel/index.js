@@ -4,8 +4,8 @@ import classNames from 'classnames';
 
 import './index.scss';
 
-const IconLabel = ({ icon, className, label, isEllipsis = false }) => (
-  <div className={classNames('iconLabel', className)}>
+const IconLabel = ({ icon, className, label, isEllipsis = false, ...props }) => (
+  <div className={classNames('iconLabel', className)} {...props}>
     <div className="iconLabel__icon">{icon}</div>
     <div className={classNames({ 'iconLabel__text--ellipsis': isEllipsis })}>{label}</div>
   </div>

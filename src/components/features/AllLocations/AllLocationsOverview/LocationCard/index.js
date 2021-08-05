@@ -10,9 +10,9 @@ import Users from '../../../../icons/Users';
 import TimeZone from '../../../../icons/TimeZone';
 import Views from '../../../../icons/Views';
 import Edit from '../../../../icons/Edit';
+import { useUserViews } from '../../../../../hooks/useUserViews';
 
 import './index.scss';
-import useUserViews from '../../../../../hooks/useUserViews';
 
 const LocationCard = ({ location: { name, userCount, createdAt, id } }) => {
   // It would be better to solve showing of the icon with css and very easy with display:none,
@@ -30,6 +30,7 @@ const LocationCard = ({ location: { name, userCount, createdAt, id } }) => {
   return (
     <Card
       className="locationCard"
+      data-testid="locationCard"
       onClick={handleClick}
       onMouseEnter={() => setIsEditIconShown(true)}
       onFocus={() => setIsEditIconShown(true)}
@@ -52,13 +53,14 @@ const LocationCard = ({ location: { name, userCount, createdAt, id } }) => {
 
       <IconLabel
         className="locationCard__content"
+        data-testid="locationCardViews"
         isEllipsis
         icon={<Views />}
         label={views[id] || 0}
       />
 
       {isEditIconShown && (
-        <div className="locationCard__hoverIcon">
+        <div data-testid="locationCardHoverIcon" className="locationCard__hoverIcon">
           <Edit />
         </div>
       )}

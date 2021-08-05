@@ -21,14 +21,16 @@ const AllLocation = () => {
   }
 
   return (
-    <ViewsProvider>
-      <Switch>
-        <Route path={`${path}/:locationId`}>
-          <LocationModal locations={data} />
-        </Route>
-      </Switch>
-      <AllLocationsOverview locations={data} />
-    </ViewsProvider>
+    <div data-testid="allLocations">
+      <ViewsProvider>
+        <Switch>
+          <Route path={`${path}/:locationId`}>
+            <LocationModal locations={data} />
+          </Route>
+        </Switch>
+        <AllLocationsOverview locations={data} />
+      </ViewsProvider>
+    </div>
   );
 };
 

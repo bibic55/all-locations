@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="app">
+      <div className="app" role="application">
         <Router>
           <Switch>
             <Redirect exact from="/" to="/locations" />
